@@ -23,7 +23,6 @@ pip3 install -U --user pip && pip3 install rasa
 
 ## Running
 
-
 1. Change directory to the project folder.
 
 ```bash
@@ -36,17 +35,21 @@ source ./venv/bin/activate
 ```
 3. Open another terminal and follow step 1 and 2.
 
-4. In the first terminal, run 
+4. In the first terminal,
 
 ```bash
-rasa run action
+rasa train
 ```
 5. In the second terminal, run
 
 ```bash
+rasa run action
+```
+6. In the first terminal,
+
+```bash
 rasa shell
 ```
-
 
 ## Sample Conversation:
 **Your input ->**  Hi!                                                                     

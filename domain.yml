@@ -1,0 +1,114 @@
+version: '3.0'
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- tempt
+- humidity
+- goodbye
+- greet
+- farm_ask
+- windspeed
+- affirm
+- deny
+- mood_great
+- mood_unhappy
+- bot_challenge
+- name_entry
+- ask_farm
+- change_farm
+- message_count
+- message_read
+- message_read_all
+- gate
+- gate_change
+- crop_growth
+- information
+
+entities:
+- farm
+- farm_message
+- act
+
+slots:
+  farm:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: farm
+
+  farm_message:
+    type: text
+    influence_conversation: true 
+    mappings:
+    - type: from_entity
+      entity: farm_message
+  
+  act:
+    type: text
+    influence_conversation: true 
+    mappings:
+    - type: from_entity
+      entity: act
+
+responses:
+  utter_greet:
+  - text: Hey I'm your personal farm assistant! How are you?
+  - text: Hi, I'm your personal farm asssistant. How are you doing?
+  - text: I'm your personal farm assistant. It's nice to see you how are you?
+  utter_form:
+  - text: What do you want to know about {farm}?
+  utter_next:
+  - text: What else would you like to know about the farm {farm}?
+  - text: What information do you want to know about {farm}?
+  utter_unhappy:
+  - text: I'm sorry about that.
+  utter_great:
+  - text: That's wonderful.
+  utter_what:
+  - text: What can I do for you?
+  utter_ask:
+  - text: Please enter the farm name.
+  utter_goodbye:
+  - text: Bye, have a nice day.
+  utter_iamabot:
+  - text: I am a bot, powered by Rasa.
+  utter_ask_farm_change:
+  - text: Do you want to change farm from {farm}?
+  utter_farm_name:
+  - text: Farm name is set to {farm}
+  utter_ok:
+  - text: Sure.
+  - text: Done.
+  utter_default:
+  - text: Sorry I didn't get that.
+
+
+actions:
+- action_humidity
+- action_tempt
+- action_windspeed
+- utter_farm_name
+- utter_goodbye
+- utter_greet
+- utter_great
+- utter_ask_farm_change
+- validate_farm_form
+- action_message_read
+- action_message_count
+- action_exit_farm
+- action_message_read_farm
+- action_message_count_farm
+- action_gate
+- action_gate_change
+- action_crop_growth
+- action_information
+
+forms:
+  farm_form:
+    required_slots:
+    - farm
+  message_form:
+    required_slots:
+    - farm_message

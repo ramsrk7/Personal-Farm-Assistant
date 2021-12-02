@@ -1,0 +1,242 @@
+version: "3.0"
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+    - No
+    - Nah
+    - Nope
+    - Nothing much
+    - No thanks
+    - No thank you
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+- intent: tempt
+  examples: |
+    - what is the temparature?
+    - How cool is it?
+    - How hot is it?
+    - Hows is the weather?
+    - weather?
+    - Is it hot?
+    - Is it cold?
+    - How hot it is?
+    - How cold it is?
+    - Whats the weather like?
+    - Hows the weather?
+    - how cold is it?
+- intent: windspeed
+  examples: |
+    - How is the wind?
+    - Is it windy?
+    - Hows the breeze?
+    - Wind speed?
+    - What is the speed of wind?
+    - Speed of air?
+    - wind speed?
+- intent: humidity
+  examples: |
+    - How humid?
+    - Humidity?
+    - Is it humid?
+    - whats the humidity?
+
+- regex: farm
+  examples: |
+    - [^\\s]*
+
+- intent: ask_farm
+  examples: |
+    - I want some information about [middle](farm)?
+    - I want some information about [middle](farm)?
+    - I want some information about [rams](farm)?
+    - I want some information about [a-zA-Z](farm)?
+    - I have some queries regarding [rams](farm)?
+    - I have got a few questions regarding [greenery](farm)?
+    - I want weather info in [Greenery](farm)
+    - Name of the farm is [Chennai](farm)
+    - Name of the farm is [Greenery](farm)
+    - Name of the farm is [Animal](farm)
+    - Farm name is [Animal](farm)
+    - Farm name is [Chennai](farm)
+    - Change farm name to [Chennai](farm)
+    - Change farm name to [Greenery](farm)
+    - Change farm name to [Middle](farm)
+    - the farm name is [rams](farm)
+    - change farm name to [Greenery](farm)
+    - change farm name to [a-zA-Z](farm)
+    - [middle](farm)
+    - [Greenery](farm)
+    - [rams](farm)
+    - [animal](farm)
+ 
+
+    
+- intent: change_farm
+  examples: |
+    - Change farm name
+    - Reset farm name
+    - farm name change
+    - select different farm
+    - select another farm
+    - change place
+    - change location
+    - different place
+    - different location
+
+- intent: message_count
+  examples: |
+    - Is there any message for me?
+    - Any message?
+    - Any message regarding the farm?
+    - Anything new?
+    - Any unread messgages?
+    - Any unopened messages for me?
+ 
+
+- intent: message_read
+  examples: |
+    - Read them 
+    - Read the messages
+    - Read messages
+    - Open the messages from [rams](farm_message)
+    - Open the messages from [greenery](farm_message)
+    - Open the messages from [middle](farm_message)
+    - Read messages from [rams](farm_message)
+    - Read messages from [middle](farm_message)
+    - Read messages from [greenery](farm_message)
+    - Read messages from [a-zA-Z](farm_message)
+    - can you read it?
+
+- intent: message_read_all
+  examples: |
+    - Read all messages
+    - open all messages
+    - read messages from all farms
+    - can you read all messages
+
+- intent: gate
+  examples: |
+    - are gates closed?
+    - Gates open?
+    - Farm gates open?
+    - gates open in farm?
+    - gates closed?
+    - gates closed in farm?
+    - check gates status
+
+- intent: gate_change
+  examples: |
+    - [open](act) the gate
+    - [close](act) the gate
+    - [close] gates
+    - [open] gates
+    - [open](act)
+    - [close](act)
+
+- intent: crop_growth
+  examples: |
+   - what is the growth stage of crop?
+   - crop growth stage?
+   - how has the crops grown?
+   - Crop growth level?
+   - crop stage?
+   - tree growth?
+   - tree stage?
+
+- intent: information
+  examples: |
+    - I want some information
+    - What can you do?
+    - What can you help me with?
+    - Help me
+    - What are the farms available
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,99 @@
+version: "3.0"
+
+stories:
+
+- story: mood unhappy
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_unhappy
+  - action: utter_what
+
+- story: mood great
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_great
+  - action: utter_what
+
+- story: normal path 2
+  steps: 
+
+  - intent: tempt
+  - action: action_tempt
+
+  
+- story: normal path 3
+  steps: 
+
+  - intent: humidity
+  - action: action_humidity
+
+- story: normal path 4
+  steps: 
+
+  - intent: windspeed
+  - action: action_windspeed
+
+- story: deny
+  steps:
+  - intent: deny
+  - action: utter_what
+
+- story: change farm
+  steps:
+  - intent: change_farm
+  - action: action_exit_farm
+  - action: utter_ok
+
+- story: info
+  steps:
+  - intent: information
+  - action: action_information
+
+- story: farm story 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_great
+  - intent: message_count
+  - action: action_message_count_farm
+  - intent: message_read
+  - action: action_message_read_farm
+  - intent: gate
+  - action: action_gate
+  - intent: gate_change
+  - action: action_gate_change
+  - intent: crop_growth
+  - action: action_crop_growth
+  - intent: tempt
+  - action: action_tempt
+  - intent: humidity
+  - action: action_humidity
+
+- story: farm story 2
+  steps:
+  - intent: change_farm
+  - action: action_exit_farm
+  - intent: message_count
+  - action: action_message_count_farm
+  - intent: message_read
+  - action: action_message_read_farm
+  - intent: message_read_all
+  - action: action_message_read
+
+
+- story: gate check
+  steps: 
+  - intent: gate
+  - action: action_gate
+  - intent: gate_change
+  - action: action_gate_change
+  
+
+
+
+

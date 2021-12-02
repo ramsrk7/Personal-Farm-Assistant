@@ -51,6 +51,8 @@ rasa run action
 rasa shell
 ```
 
+If unable to train, download the pretrained model and add the folder to the directory from following link - https://drive.google.com/drive/folders/1KUhAcC0-rmwnU9s2kD1vj6KMZLsozQpk?usp=sharing.  
+
 ## Sample Conversation:
 **Your input ->**  Hi!                                                                     
 **Bot ->** I'm your personal farm assistant. It's nice to see you how are you?   

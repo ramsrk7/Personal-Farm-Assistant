@@ -1,0 +1,6 @@
+Name,Message,Sender,Date,Read,,
+rams,"Hi, the field has been irrigated today morning.",supervisor,11/11/21 12:00,1,,
+greenery,"Hey, there’s some issue with the water pump. Seems like we need to get a new one. ",plumber,11/11/22 12:00,0,,
+nature,Raw materials have arrived. ,supervisor,11/11/21 13:00,1,,
+middle,We need to harvest soon. ,supervisor,13/11/21 10:00,0,,
+animal,A few of the cows are sick. Need to take them to the vet. ,security,14/11/21 13:00,0,,
